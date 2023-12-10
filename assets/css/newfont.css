@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'e';
+    src: url('../fonts/e.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'kaishu';
+    src: url('../fonts/kaishu.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lishu';
+    src: url('../fonts/lishu.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'fangsong';
+    src: url('../fonts/fangsong.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'xingkai';
+    src: url('../fonts/xingkai.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'youyuan';
+    src: url('../fonts/youyuan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'xinwei';
+    src: url('../fonts/xinwei.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.kaishu {
+    color: #424C50;
+    font-weight:600;
+    font-size: 17px;
+    font-family: 'kaishu';
+}
+.type3 {
+    color: #424C50;
+    font-weight:700;
+    font-size: 22px;
+    font-family: 'e';
+}
+.type5 {
+    color: #424C50;
+    font-weight:700;
+    font-size: 30px;
+    font-family: 'e';
+}
+
+.lishu {
+    color: #424C50;
+    font-weight:300;
+    font-size: 22px;
+    font-family: 'lishu';
+}
+.fangsong {
+    color: #424C50;
+    font-weight:700;
+    font-size: 20px;
+    font-family: 'fangsong';
+}
+.xinwei {
+    color: #575757;
+    font-weight:550;
+    font-size: 22px;
+    font-family: 'xinwei';
+}
+.youyuan {
+    color: #424C50;
+    font-weight:700;
+    font-size: 20px;
+    font-family: 'youyuan';
+}
+.xingkai {
+    color: #575757;
+    font-weight:300;
+    font-size: 22px;
+    font-family: 'xingkai';
+}
