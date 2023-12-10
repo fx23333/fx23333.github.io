@@ -72,7 +72,7 @@ redirect_from:
 - <span class="youyuan">【人工智能-自然语言处理】</span><span class="fangsong">Kaggle：Feedback Prize-Evaluating Student Writing</span>
   - 访问了有史以来最大的学生写作数据集，对6至12年级学生撰写的论文中的文本进行分段，并对议论性和修辞性元素进行分类，帮助虚拟写作导师和自动写作系统利用这些算法减少评分时间，印证了自己在自然语言处理方面的优秀能力
   - **【比赛方案】**（1）数据方面首先对官方数据中一些不干净的原标签进行修复；（2）整体的方案采用了Longformer+Deberta的双模型融合；（3）为防止过拟合，尝试在模型头部位置加入Dropout层；（4）训练出了Longformer-base-4096和Deberta-large两个模型，并在模型预测出结果后，使用了后处理的方式来进一步筛选预测的实体，主要是对每种实体的最小长度和最小置信度做出限制，如果小于阈值则被后处理筛掉；（5）最后进行CV-10-Fold和简单的加权融合
-  - <span class="kaishu">取得了的0.712的Final Score，最终摘得本次竞赛的银牌（88 / 2058）</span>，[Feedback Prize 2021-Leaderboard](https://www.kaggle.com/competitions/feedback-prize-2021/leaderboard)
+  - **取得了的0.712的Final Score，最终摘得本次竞赛的银牌（88 / 2058）**，[Feedback Prize Leaderboard](https://www.kaggle.com/competitions/feedback-prize-2021/leaderboard)
 
 - <span class="youyuan">【人工智能-自然语言处理】</span><span class="fangsong">实体-立场分析（数据集构建和模型微调）</span>
   - 针对实验所选择的“两岸关系”、“疫苗”话题领域，对一段输入文本，识别文本中的实体，并给出该实体对于话题的立场
