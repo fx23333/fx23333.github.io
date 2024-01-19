@@ -43,7 +43,7 @@ redirect_from:
 # 📁 Research Experience
 
 - <span class="xingkai" style="font-size: 30px;">分布式系统</span>
-  - **<span class="youyuan">【分布式系统基础知识】</span>**
+  - **<span class="youyuan">【分布式系统】</span>**<span class="fangsong">基础知识</span>
     - **【一致性算法】**为了实现各种一致性，需要使用一些一致性算法。尽管Paxos作为奠基者，其理解难度过大，并且现实世界中各方对Paxos的实现略有不同。而Raft则是一种更清晰、更易理解、更易部署的算法。**本人基于MIT6.824的Lab2，完成了一个Raft算法的实现**（为了实现Raft算法，本人还对Go的并发控制模型（[Go Concurrency Control Models](https://1drv.ms/b/s!AlxOiC78JsFshzmlIgVBPy5FLHwf?e=fWELY7)）、RPC等（[Go Basic](https://1drv.ms/b/s!AlxOiC78JsFshy-SkKhTkYJThoe1?e=CcZrWX)）知识做了一些了解）。除[Raft](https://1drv.ms/b/s!AlxOiC78JsFshzuYS6XiHRpToK2M?e=xlLGMC)外，本人还熟悉[CRAQ](https://1drv.ms/b/s!AlxOiC78JsFshz_7G171B1pCnimm?e=p8YcRV)
     - **【分布式计算】**本人对[MapReduce](https://1drv.ms/b/s!AlxOiC78JsFshx0JxilRuCR3BA3L?e=gcKofn)和[Spark](https://1drv.ms/b/s!AlxOiC78JsFshyZD71qUeBMombKR?e=WoWqhm)均比较熟悉。各类分布式文件系统/存储系统的设计，为分布式计算提供了基础设施。例如MapReduce建立在GFS之上，Spark以HDFS为依托。尽管前者作为Google三驾马车之二，但其类批处理的模式、单一的运算和较高的编程要求，使其正在逐渐淡出历史舞台；而Spark的RDD高级抽象，基于内存迭代的计算方式、基于DAG的任务调度等特性使得Spark在面临数据挖掘、机器学习等任务时具有更强的竞争力（尽管受到了Flink等框架的挑战）
     - **【分布式存储】**本人熟悉的分布式存储系统包括[Google File System](https://1drv.ms/b/s!AlxOiC78JsFshzQfDVS3oCI_8tH3?e=7Ejojc)、[Frangipani](https://1drv.ms/b/s!AlxOiC78JsFshx60xxiA__QylCER?e=BeK5CC)和[COPS](https://1drv.ms/b/s!AlxOiC78JsFshyowetpTrtzcIqw_?e=EcbRh5)。GFS作为Google三驾马车之一，具有其创新性。GFS相比以往的分布式文件系统，认为部分服务器的故障是一种常态。因此，将持续监测、错误检测、容错、自动恢复纳入GFS必不可少的重要功能，并且可以与MapReduce在同一集群上协作；Frangipani由于其针对Cache一致性的相关设计而独树一帜；相较之下，COPS则提出了因果一致性的相关设计方案
@@ -57,20 +57,22 @@ redirect_from:
     - **【复制和分片】**通常为了获得更好的性能，分布式系统会采复制/分片两种方案。复制能够有效地降低大吞吐量场景下单个结点的负载并且（部分分布式系统）允许读取本地replica，能有效降低传播时延；分片则提供了更好的拓展性，可以满足数据动态增长的需求。两种方式各有利弊，但并非对立。Memcached的实现就充分结合了两者的优点：在Region之间使用复制，在同一cluster内则利用一致性哈希协议，采用分片的方案，Frangipani亦是如此（个人愚见，对于分布式存储系统/文件系统而言，分片是根本要求，而复制则是可用性的必然保障，两者应该兼具）
     - **【可用性、一致性和分区容错性】**一个具有大规模结点的分布式系统必然会有容错的要求。容错通常使用非易失性内存和复制两种方式。FaRM就是使用非易失性内存的典范。对于复制而言，会额外产生一致性的问题。一致性可以简单分为强一致性/可线性化和弱一致性（最终一致性、因果一致性等）。CAP定理证明了一个分布式系统不可能同时兼具可用性、一致性和分区容错性。现实中，相当的设计舍弃了强一致性
     - **【作为上层应用的基础设施】**目前，深度学习迅速发展，而分布式系统的脚步也从未停歇。近来，本人接触到了网内计算的相关概念，其充分利用了各类网络设备，有效地提高了深度神经网络的计算性能
+
+  - <span class="youyuan">【学习计划】</span>
+    - 因为接触时间较短，我目前的知识水平可能还比较有限，但我具有足够的毅力决心以及对分布式系统领域十足的兴趣，所以会在未来进一步学习系统相关的知识。我计划继续完成MIT6.824的学习和Lab，剩余内容已经不多，相信很快就能完成；我还会再利用剩余时间，去完成高质量的操作系统lab（本校的操作系统实验使用ia32架构，并且对于多进程调度等内容涉及较少，但相应地收获了很多x86汇编的知识），例如MIT6.828等；同时我也将广泛涉猎编译原理、计算机体系结构等领域的相关知识并阅读近年来分布式系统领域的[经典论文](https://iswade.github.io/02_distributed_system_paper)
 - <span class="xingkai" style="font-size: 30px;">人工智能安全</span>
   - <span class="youyuan">【人工智能-人工智能安全】</span> <span class="fangsong">对基于后门的深度神经网络水印的新型保护方法</span>
     - 针对痛点：（1）深度学习网络存在被窃取的风险，被窃取后无法证明归属权，现今常用用嵌入水印的方式来证明模型的归属权（IP）；（2）DNN水印鲁棒性较差，对fine-tune攻击防御能力差；（3）目前大多数研究都着眼于设计更鲁棒的水印方法，设计新型后门来让模型在被fine-tune之后水印仍然可以保留，而由于水印是基于神经网络后门的，水印的鲁棒性受限于后门技术的发展，很难做到在不影响原本神经网络功能的情况下去嵌入稳固的水印，此种旧思路目前暂时难获得较好的进展
     - 我们则使用了一种巧妙的“逆思维”解决思路完美地解决了这个问题
 
-- **<span class="xingkai" style="font-size: 30px;">学习计划</span>**
-  - 因为接触时间较短，我目前的知识水平可能还比较有限，但我具有足够的毅力决心以及对分布式系统领域十足的兴趣，所以会在未来进一步学习系统相关的知识。我计划继续完成MIT6.824的学习和Lab，剩余内容已经不多，相信很快就能完成；我还会再利用剩余时间，去完成高质量的操作系统lab（本校的操作系统实验使用ia32架构，并且对于多进程调度等内容涉及较少，但相应地收获了很多x86汇编的知识），例如MIT6.828等；同时我也将广泛涉猎编译原理、计算机体系结构等领域的相关知识并阅读近年来分布式系统领域的[经典论文](https://iswade.github.io/02_distributed_system_paper)
+
 
 
 # 📚 Project
 - <span class="youyuan">【人工智能-自然语言处理】</span><span class="fangsong">Kaggle：Feedback Prize-Evaluating Student Writing</span>
   - 访问了有史以来最大的学生写作数据集，对6至12年级学生撰写的论文中的文本进行分段，并对议论性和修辞性元素进行分类，帮助虚拟写作导师和自动写作系统利用这些算法减少评分时间，印证了自己在自然语言处理方面的优秀能力
   - **【比赛方案】**（1）数据方面首先对官方数据中一些不干净的原标签进行修复；（2）整体的方案采用了Longformer+Deberta的双模型融合；（3）为防止过拟合，尝试在模型头部位置加入Dropout层；（4）训练出了Longformer-base-4096和Deberta-large两个模型，并在模型预测出结果后，使用了后处理的方式来进一步筛选预测的实体，主要是对每种实体的最小长度和最小置信度做出限制，如果小于阈值则被后处理筛掉；（5）最后进行CV-10-Fold和简单的加权融合
-  - <span class="kaishu">取得了的0.712的Final Score，最终摘得本次竞赛的银牌（88 / 2058）</span>，[Feedback Prize 2021-Leaderboard](https://www.kaggle.com/competitions/feedback-prize-2021/leaderboard)
+  - **取得了的0.712的Final Score，最终摘得本次竞赛的银牌（88 / 2058）**，[Feedback Prize Leaderboard](https://www.kaggle.com/competitions/feedback-prize-2021/leaderboard)
 
 - <span class="youyuan">【人工智能-自然语言处理】</span><span class="fangsong">实体-立场分析（数据集构建和模型微调）</span>
   - 针对实验所选择的“两岸关系”、“疫苗”话题领域，对一段输入文本，识别文本中的实体，并给出该实体对于话题的立场
