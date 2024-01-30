@@ -80,7 +80,7 @@ redirect_from:
 - <span class="youyuan">【人工智能-自然语言处理】</span><span class="fangsong">Kaggle：Feedback Prize-Evaluating Student Writing</span>
   - 访问了有史以来最大的学生写作数据集，对6至12年级学生撰写的论文中的文本进行分段，并对议论性和修辞性元素进行分类，帮助虚拟写作导师和自动写作系统利用这些算法减少评分时间，印证了自己在自然语言处理方面的优秀能力
   - **【比赛方案】**（1）数据方面首先对官方数据中一些不干净的原标签进行修复；（2）整体的方案采用了Longformer+Deberta的双模型融合；（3）为防止过拟合，尝试在模型头部位置加入Dropout层；（4）训练出了Longformer-base-4096和Deberta-large两个模型，并在模型预测出结果后，使用了后处理的方式来进一步筛选预测的实体，主要是对每种实体的最小长度和最小置信度做出限制，如果小于阈值则被后处理筛掉；（5）最后进行CV-10-Fold和简单的加权融合
-  - **取得了的0.712的Final Score，最终摘得本次竞赛的银牌（88 / 2058）**，[Feedback Prize Leaderboard](https://www.kaggle.com/competitions/feedback-prize-2021/leaderboard)
+  - <span class="kaishu">取得了的0.712的Final Score，最终摘得本次竞赛的银牌（88 / 2058）</span>，[Feedback Prize Leaderboard](https://www.kaggle.com/competitions/feedback-prize-2021/leaderboard)
 
 - <span class="youyuan">【人工智能-自然语言处理】</span><span class="fangsong">实体-立场分析（数据集构建和模型微调）</span>
   - 针对实验所选择的“两岸关系”、“疫苗”话题领域，对一段输入文本，识别文本中的实体，并给出该实体对于话题的立场
@@ -99,6 +99,12 @@ redirect_from:
   - <span class="kaishu">相关作品获中国大学生计算机设计大赛中南地区赛二等奖</span>
 
 
+- <span class="youyuan">【数据库系统】</span><span class="fangsong">安全可信的数据库系统设计</span>
+  - 在 Linux+MySQL+HTML/css/JavaScript+Flask下设计完成一个前端Web界面+后端数据库系统的网站
+  - 主要实现任务有：数据库操作以及应用与数据库交互过程的编写、防止 SQL 注入的基本功能、数据库并发、数据备份与恢复、数据库完整性检查等功能的实现、不同类型的用户权限访问控制、简单的前端界面
+  - <span class="kaishu">相关工作被评为Excellent Project（课程得分：95/100）</span>
+
+
 - <span class="youyuan">【计算机基础教学】</span><span class="fangsong">从“堆盒子”到动态规划</span>
   - 算法自身的抽象性往往是同学们算法学习的最大阻碍，而“化抽象为具象”的最佳方法便是对算法进行“可视化”。
   - 本作品采用了与著名博主3Blue1Brown所同源的基于Python的数学动画制作引擎Manim来制作，自主编写3000余行代码，配合后期大量的代码微调、剪辑、配音、AI字幕搭配工作，最终得以完成本次作品
@@ -110,11 +116,6 @@ redirect_from:
   - 以自主研发的具有学员课程培训、企业人才遴选等多功能的集成性“启阳伴学”小程序为平台，前期独创“行教”模式与公益结合，致力于改变教育资源分配不均衡的问题，后期将业务范围扩充至多栖教育领域，通过独有的校园壁垒、完备的评价体系定向输送新生血液，为全教育行业提供接触优秀大学生的广阔平台
   - <span class="kaishu">项目于2022年上半年正式投入运营，团队创收10w+；并获马云主办的“善创未来·美好大会”全球青年社会创新大赛全国总决赛二等奖</span>
 
-
-- <span class="youyuan">【数据库系统】</span><span class="fangsong">安全可信的数据库系统设计</span>
-  - 在 Linux+MySQL+HTML/css/JavaScript+Flask下设计完成一个前端Web界面+后端数据库系统的网站
-  - 主要实现任务有：数据库操作以及应用与数据库交互过程的编写、防止 SQL 注入的基本功能、数据库并发、数据备份与恢复、数据库完整性检查等功能的实现、不同类型的用户权限访问控制、简单的前端界面
-  - <span class="kaishu">相关工作被评为Excellent Project（课程得分：95/100）</span>
 
 <!-- - <span class="youyuan">【系统安全】</span><span class="fangsong">信息系统安全实践</span>
   - 依托OllyDebug和IDEA等工具对真实的恶意样本逻辑进行分析，使用AFL对恶意样本进行模糊测试、探索Selinux相关安全机制的原理与使用
