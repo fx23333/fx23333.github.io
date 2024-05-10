@@ -53,7 +53,7 @@ redirect_from:
   - **【分布式数据库】**本人熟悉的分布式数据库包括[Aurora](https://1drv.ms/b/s!AlxOiC78JsFshxxUNsHA7Ykbw-VU?e=NBJBFf)、[Spanner](https://1drv.ms/b/s!AlxOiC78JsFshyIaFswhNN1lBj-D?e=YL7qDb)和[FaRM](https://1drv.ms/b/s!AlxOiC78JsFshyFtzeSmouGvy7uM?e=CNnPBK)。Aurora基于亚马逊开发的各类基础设施构建，包含一个多租横向存储服务，此存储服务抽象了一个虚拟化的分段redo log，并且和分布式数据库集群的实例（instance） 是松耦合的，Aurora通常被认为是一个CA系统；Spanner则利用Paxos机制配合2PC协议达到强一致性，根据谷歌CIO的说法，Spanner从技术上是一个CP系统，但仍然提供了非常高的可用性；FaRM则充分利用了硬件特性RDMA和内核旁路机制，然而正是由于RDMA的运用，使得其分布式事务协议显得更加复杂；同时，本人还了解分布式数据库经常使用的分布式事务协议（例如[2PC](https://1drv.ms/b/s!AlxOiC78JsFshyCylPPq58laeI5h?e=uM6RXV)）
   - **【区块链/去中心化】**本人对于这块内容主要了解[Bitcoin](https://1drv.ms/b/s!AlxOiC78JsFshy6gYf3LSlSwz_-9?e=Ifl8v9)、[BlockStack](https://1drv.ms/b/s!AlxOiC78JsFshzLuTLpsF6514n5k?e=6ja32l)和[Certificate Transparency](https://1drv.ms/b/s!AlxOiC78JsFshyzDkBlIQN3dOteW?e=eWjHmh)等知识。区块链充分利用了密码学哈希来实现Proof of Work来达成各个结点的共识，并且较为有效地解决了Fork Consistency的问题；而Blockstack则建立于比特币之上，试图构建一个去中心化应用架构；而证书透明度则利用一种审计的视角来提供网络站点证书的管理，可以防范并追踪中间人攻击
 
-- **</span><span class="fangsong">分布式系统理解</span>**
+- **<span class="fangsong">分布式系统理解</span>**
   - **【分布式系统部署的必然性】**分布式系统在计算机网络体系和理论逐渐完善、互联网数据膨胀导致需要兴建大量数据中心和云计算的兴起等多方面因素的共同作用下应运而生。在单结点性能不能满足庞大数据吞吐量的情况下，分布式系统的部署成为必然
   - **【分布式系统依赖底层基础设施】**绝大部分分布式系统架构的设计依赖于底层计算机网络、计算机体系结构和计算机操作系统的支持。例如VMWare FT的解决方案需要在Primary 向backup传送定时器中断后，在对应的指令处由backup的处理器也产生中断；在Memcached中，充分利用了TCP可靠性高和UDP传输效率高的特点，分别用于实现get和set操作；在GFS的设计中，其chunk只不过是Linux文件系统中的一个普通文件
   - **【复制和分片】**通常为了获得更好的性能，分布式系统会采复制/分片两种方案。复制能够有效地降低大吞吐量场景下单个结点的负载并且（部分分布式系统）允许读取本地replica，能有效降低传播时延；分片则提供了更好的拓展性，可以满足数据动态增长的需求。两种方式各有利弊，但并非对立。Memcached的实现就充分结合了两者的优点：在Region之间使用复制，在同一cluster内则利用一致性哈希协议，采用分片的方案，Frangipani亦是如此（个人愚见，对于分布式存储系统/文件系统而言，分片是根本要求，而复制则是可用性的必然保障，两者应该兼具）
@@ -68,7 +68,6 @@ redirect_from:
     - 个人贡献： rebuttal 阶段针对审稿人提出实验数目相对不足的情况下进行补充实验；同时对审稿人指定的图框架进行实验，测试插入性能与内存占用。其中，审稿人指定了论文*《CSR5: An Efficient Storage Format for Cross-Platform Sparse Matrix-Vector Multiplication》*，但该论文是对 CSR 存储结构出于优化 SpMV 性能为目的的改进，并非专用于图存储，针对这种情况，我根据相关论文自行实现了简单的 CSR5 用于存图，并完成了对边插入性能和内存占用指标的评估。
     - **本工作目前 KDD24 在审；由于我是后期参与进来的，所以并未在 KDD24 版本挂名，但老师承诺如果KDD 中了会在致谢部分致谢并在增扩期刊时署名/如果 KDD 不中会转投 VLDB 时署名**
 
-- <span class="xingkai" style="font-size: 30px;">分布式系统</span>
 
 
   <!-- - <span class="youyuan">【学习计划】</span>
